@@ -1,0 +1,34 @@
+package Atendimento;
+
+public class Medico extends Pessoa {
+
+	private String Especialidade;
+	
+	public Medico(String Nome, String DataNascimento, String Especialidade) {
+		this.Nome = Nome;
+		this.DataNascimento = DataNascimento;
+		this.Especialidade = Especialidade;
+	}
+
+	public String getEspecialidade() {
+		return Especialidade;
+	}
+
+	public void setEspecialidade(String especialidade) {
+		Especialidade = especialidade;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Medico [Especialidade=");
+		builder.append(Especialidade);
+		builder.append(", Nome=");
+		builder.append(Nome);
+		builder.append(", DataNascimento=");
+		builder.append(DataNascimento);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+}
