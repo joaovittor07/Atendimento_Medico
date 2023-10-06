@@ -1,0 +1,47 @@
+package Atendimento;
+
+public class Paciente extends Pessoa {
+	
+	private String Chegada;
+	
+	private String Saida;
+	
+	public Paciente(String Nome, String DataNascimento, String chegada, String saida) {
+		this.Nome = Nome;
+		this.DataNascimento = DataNascimento;
+		this.Chegada = chegada;
+		this.Saida = saida;
+	}
+
+	public String getChegada() {
+		return Chegada;
+	}
+
+	public void setChegada(String chegada) {
+		Chegada = chegada;
+	}
+
+	public String getSaida() {
+		return Saida;
+	}
+
+	public void setSaida(String saida) {
+		Saida = saida;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Paciente [Chegada=");
+		builder.append(Chegada);
+		builder.append(", Saida=");
+		builder.append(Saida);
+		builder.append(", Nome=");
+		builder.append(Nome);
+		builder.append(", DataNascimento=");
+		builder.append(DataNascimento);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+}
