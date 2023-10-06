@@ -1,0 +1,180 @@
+package Atendimento;
+
+public class Atendimento {
+	
+	private String inicioAtendimento;
+	
+	private String DatadeNascimento;
+	
+	private int prioridade = 0;
+	
+	private boolean atestado;
+	
+	private Paciente paciente;
+	
+	private Medico medico;
+	
+	public boolean SenteDor; 
+	
+	public boolean BebeuAlcool;
+	
+	public boolean SabeSeuNome;
+	
+	public boolean UtilizaMedicamentos;
+	
+	public boolean EstaNervoso;
+	
+	public Atendimento(String inicioAtendimento, boolean atestado,
+			Paciente paciente, Medico medico, boolean senteDor, boolean bebeuAlcool, boolean sabeSeuNome,
+			boolean utilizaMedicamentos, boolean estaNervoso) {
+		super();
+		this.inicioAtendimento = inicioAtendimento;
+		this.atestado = atestado;
+		this.paciente = paciente;
+		this.medico = medico;
+		SenteDor = senteDor;
+		BebeuAlcool = bebeuAlcool;
+		SabeSeuNome = sabeSeuNome;
+		UtilizaMedicamentos = utilizaMedicamentos;
+		EstaNervoso = estaNervoso;
+	}
+
+	public Paciente getPaciente() {
+		return paciente;
+	}
+
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+
+	public Medico getMedico() {
+		return medico;
+	}
+
+	public void setMedico(Medico medico) {
+		this.medico = medico;
+	}
+
+	public String getInicioAtendimento() {
+		return inicioAtendimento;
+	}
+
+	public void setInicioAtendimento(String inicioAtendimento) {
+		this.inicioAtendimento = inicioAtendimento;
+	}
+
+	public String getDatadeNascimento() {
+		return DatadeNascimento;
+	}
+
+	public void setDatadeNascimento(String datadeNascimento) {
+		DatadeNascimento = datadeNascimento;
+	}
+	
+	public int getPrioridade() {
+		return prioridade;
+	}
+
+	public void setPrioridade(int prioridade) {
+		this.prioridade = prioridade;
+	}
+	public boolean isAtestado() {
+		return atestado;
+	}
+
+	public void setAtestado(boolean atestado) {
+		this.atestado = atestado;
+	}
+	
+	public boolean isSenteDor() {
+		return SenteDor;
+	}
+
+	public void setSenteDor(boolean senteDor) {
+		SenteDor = senteDor;
+	}
+
+	public boolean isBebeuAlcool() {
+		return BebeuAlcool;
+	}
+
+	public void setBebeuAlcool(boolean bebeuAlcool) {
+		BebeuAlcool = bebeuAlcool;
+	}
+
+	public boolean isSabeSeuNome() {
+		return SabeSeuNome;
+	}
+
+	public void setSabeSeuNome(boolean sabeSeuNome) {
+		SabeSeuNome = sabeSeuNome;
+	}
+
+	public boolean isUtilizaMedicamentos() {
+		return UtilizaMedicamentos;
+	}
+
+	public void setUtilizaMedicamentos(boolean utilizaMedicamentos) {
+		UtilizaMedicamentos = utilizaMedicamentos;
+	}
+
+	public boolean isEstaNervoso() {
+		return EstaNervoso;
+	}
+
+	public void setEstaNervoso(boolean estaNervoso) {
+		EstaNervoso = estaNervoso;
+	}
+
+	public void NivelPrioridade() {
+		
+		if(SenteDor == true) {
+			
+			prioridade = (prioridade + 1);
+			
+		}
+		
+		if(BebeuAlcool == true) {
+			
+			prioridade = (prioridade + 2);
+			
+		}
+		
+		if(SabeSeuNome == true) {
+			
+			prioridade = (prioridade + 3);
+			
+		}
+		
+		if(UtilizaMedicamentos == true) {
+			
+			prioridade = (prioridade + 4);
+			
+		}
+		
+		if(EstaNervoso == true) {
+			
+			prioridade = (prioridade + 5);
+			
+		}
+		
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Atendimento [inicioAtendimento=");
+		builder.append(inicioAtendimento);
+		builder.append(", DatadeNascimento=");
+		builder.append(DatadeNascimento);
+		builder.append(", atestado=");
+		builder.append(atestado);
+		builder.append(", paciente=");
+		builder.append(paciente);
+		builder.append(", medico=");
+		builder.append(medico);
+		builder.append("]");
+		return builder.toString();
+	}
+
+}
