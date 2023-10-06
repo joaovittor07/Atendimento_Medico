@@ -1,0 +1,16 @@
+package Atendimento;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListaAtendimento {
+	
+	private List<Atendimento> ListaAtendimento = new ArrayList<Atendimento>();
+	
+	public void Adicionar(Atendimento atendimento) {
+		
+		ListaAtendimento.add(atendimento);
+		
+	}
+	
+}
